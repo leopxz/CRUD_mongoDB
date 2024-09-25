@@ -41,10 +41,10 @@ Acesse a aplicação no navegador no endereço: http://127.0.0.1:5000.
 CRUD mongodb/<br>
 │<br>
 ├── static/css/              -> Contém o arquivo de estilo CSS para a interface da aplicação.<br>
-|   └── style.css/<br>
+ |   └── style.css/<br>
 ├── templates/               -> Define os modelos de dados usados na aplicação.<br>
 │   └── create.html<br>
-|   └── details.html<br>
+ |   └── details.html<br>
 │   └── index.html<br>
 │   └── update.html<br>
 ├── app.py                  -> Arquivo principal que contém as rotas da aplicação Flask e a lógica para conexão com o MongoDB.<br>
