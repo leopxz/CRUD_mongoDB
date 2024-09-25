@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Contato</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Criar Novo Contato</h1>
+    <form method="POST">
+        Nome: <input type="text" name="name" required><br>
+        CPF: <input type="text" name="cpf" required><br>
+        Idade: <input type="number" name="idade" required><br>
+        Email: <input type="email" name="email" required><br>
+        Telefone: <input type="text" name="telefone" required><br>
+        Rua: <input type="text" name="rua" required><br>
+        Número: <input type="number" name="numero" required><br>
+        Cidade: <input type="text" name="cidade" required><br>
+        Estado: <input type="text" name="estado" required><br>
+        CEP: <input type="text" name="cep" required><br>
+        Data de Nascimento: <input type="date" name="data_de_nascimento" required><br>
+        <button type="submit">Criar</button>
+    </form>
+    <br>
+    <a href="{{ url_for('index') }}">Voltar à Lista</a>
+    <br><br>
+</body>
+</html>

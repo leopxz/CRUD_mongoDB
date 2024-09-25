@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Contato</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Detalhes do Contato</h1>
+    
+    {% if contact %}
+        <div class="details-container">
+            <p><strong>Nome:</strong> {{ contact['nome'] }}</p>
+            <p><strong>CPF:</strong> {{ contact['cpf'] }}</p>
+            <p><strong>Idade:</strong> {{ contact['idade'] }}</p>
+            <p><strong>Email:</strong> {{ contact['email'] }}</p>
+            <p><strong>Telefone:</strong> {{ contact['telefone'] }}</p>
+            <p><strong>Rua:</strong> {{ contact['endereco']['rua'] }}</p>
+            <p><strong>Número:</strong> {{ contact['endereco']['numero'] }}</p>
+            <p><strong>Cidade:</strong> {{ contact['endereco']['cidade'] }}</p>
+            <p><strong>Estado:</strong> {{ contact['endereco']['estado'] }}</p>
+            <p><strong>CEP:</strong> {{ contact['endereco']['cep'] }}</p>
+            <p><strong>Data de Nascimento:</strong> {{ contact['data_de_nascimento'] }}</p>
+            <p><strong>Data de Cadastro:</strong> {{ contact['data_cadastro'].strftime('%Y-%m-%d %H:%M:%S') }}</p>
+        </div>
+    {% else %}
+        <p>Contato não encontrado.</p>
+    {% endif %}
+    
+    <br>
+    <a href="{{ url_for('index') }}" class="">Voltar à Lista</a>
+    <br><br>
+</body>
+</html>

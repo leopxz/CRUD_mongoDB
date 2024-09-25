@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Contatos</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    
+<body>
+    <h1>Contatos</h1>
+    <a class="buttonc" href="{{ url_for('create') }}">Criar Novo Contato</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Idade</th>
+                <th>Email</th>
+
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+            <tr>
+                <td>{{ contact['nome'] }}</td>
+                <td>{{ contact['cpf'] }}</td>
+                <td>{{ contact['telefone'] }}</td>
+                <td>{{ contact['idade'] }}</td>
+                <td>{{ contact['email'] }}</td>
+
+
+                <td>
+                    <a class="buttone" href="{{ url_for('details', contact_id=contact['_id']) }}">Detalhes</a>
+                    <a class="buttonc" href="{{ url_for('update', contact_id=contact['_id']) }}">Editar</a>
+                    <a class="buttond" href="{{ url_for('delete', contact_id=contact['_id']) }}">Deletar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+

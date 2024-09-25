@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atualizar Contato</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    
+<body>
+    <h1>Atualizar Contato</h1>
+    <form method="POST">
+        Nome: <input type="text" name="name" value="{{ contact['nome'] }}" required><br>
+        CPF: <input type="text" name="cpf" value="{{ contact['cpf'] }}" required><br>
+        Idade: <input type="number" name="idade" value="{{ contact['idade'] }}" required><br>
+        Email: <input type="email" name="email" value="{{ contact['email'] }}" required><br>
+        Telefone: <input type="text" name="telefone" value="{{ contact['telefone'] }}" required><br>
+        Rua: <input type="text" name="rua" value="{{ contact['endereco']['rua'] }}" required><br>
+        Número: <input type="number" name="numero" value="{{ contact['endereco']['numero'] }}" required><br>
+        Cidade: <input type="text" name="cidade" value="{{ contact['endereco']['cidade'] }}" required><br>
+        Estado: <input type="text" name="estado" value="{{ contact['endereco']['estado'] }}" required><br>
+        CEP: <input type="text" name="cep" value="{{ contact['endereco']['cep'] }}" required><br>
+        Data de Nascimento: <input type="date" name="data_de_nascimento" value="{{ contact['data_de_nascimento'] }}" required><br>
+        <button type="submit">Atualizar</button>
+    </form>
+    <br>
+    <a href="{{ url_for('index') }}">Voltar à Lista</a>
+    <br><br>
+</body>
+</html>
