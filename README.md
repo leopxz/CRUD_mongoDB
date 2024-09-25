@@ -38,15 +38,16 @@ Acesse a aplicação no navegador no endereço: http://127.0.0.1:5000.
 
 ## Estrutura
 
-CRUD mongodb/
-│
-├── static/css/              
-|   └── style.css/
-├── templates/
-│   └── create.html
-|   └── details.html
-│   └── index.html
-│   └── update.html
-
+CRUD mongodb/<br>
+│<br>
+├── static/css/              -> Contém o arquivo de estilo CSS para a interface da aplicação.<br>
+|   └── style.css/<br>
+├── templates/               -> Define os modelos de dados usados na aplicação.<br>
+│   └── create.html<br>
+|   └── details.html<br>
+│   └── index.html<br>
+│   └── update.html<br>
+├── app.py                  -> Arquivo principal que contém as rotas da aplicação Flask e a lógica para conexão com o MongoDB.<br>
+<br>
 ##Contribuição
 Sinta-se à vontade para abrir issues e enviar pull requests. Toda ajuda é bem-vinda para melhorar a aplicação.
